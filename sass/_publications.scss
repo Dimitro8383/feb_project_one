@@ -1,0 +1,117 @@
+.publ-all-cards-contain {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+   
+    @media (min-width: 768px)  {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'one two'
+            'three three'
+        ;
+    }   
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "one two three"
+        ;
+    }
+}
+
+@media (min-width: 768px) {        
+    .publ-card-one {
+        grid-area: one;
+
+    }
+    .publ-card-two {
+        grid-area: two;
+    }
+    .publ-card-three {
+        grid-area: three;
+    }
+}
+
+.publ {
+    padding-top: 30px;
+    background: #F5F5FA;
+
+    &-card-color {
+        background-color: #ffffff;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    &-text {
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        align-self: stretch;
+        background-color: #ffffff;
+        border-radius: 0px 0px 8px 8px;
+    }
+
+    &-pic {
+        height: 200px;
+        align-self: stretch; 
+        border-radius: 8px 8px 0px 0px;
+        background-repeat: no-repeat;
+        background-position: center;         
+        background-size: cover;
+        width: 100%;
+        
+        &-one {
+            background-image: url(../images/publ-one.jpg);
+        }
+
+        &-two {
+            background-image: url(../images/publ-two.jpg);
+        }
+
+        &-three {
+            background-image: url(../images/publ-three.jpg);
+        }
+    }
+    
+    &-text {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+
+        &-title {
+            color: #24A3FF;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &-date {
+            color: #B3B3BA;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        &-line::after {
+            content: '';
+            display: block;
+            height: 4px;
+            background-color: #E6E6F0;
+        }
+
+        &-description {
+            color: #000;
+            font-size: 14px;    
+            line-height: 22px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}

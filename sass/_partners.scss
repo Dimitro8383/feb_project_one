@@ -1,0 +1,94 @@
+.trustus {
+    color: #323264;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.parnter-card {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+.partner-all-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media (min-width:768px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (min-width: 1440px) {
+        margin-bottom: calc((100% - 1440px)*0.21);
+    }
+
+    @media (min-width: 1920px) {
+        overflow: hidden;
+        border-radius: 12px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partcard:nth-child(n + 7) {
+        display: none;
+    }
+}
+
+.hillel {
+    background-color: #1C4280;
+}
+
+.wannabiz {
+    background-color: #143646;
+}
+
+.tapgerine {
+    background-color: #F48B30;
+}
+
+.look {
+    background-color: #9E4DC3;
+}
+
+.orangear {
+    background-color: #FD9339;
+}
+
+.adtellige {
+    background-color: #E2E2E4;
+}
+
+.clickky {
+    background-color: #C71C36;
+}
+
+.ecoleasing {
+    background-color: #DCF3F9;
+}
+
+.infra-tek {
+    background-color: #EAEAEA;
+}
+
+.city-park {
+    background-color: #282240;
+}
+
+.art-print {
+    background-color: #1D4568;
+}
+
+.ultimate {
+    background-color: #000;
+}
