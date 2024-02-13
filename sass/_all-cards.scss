@@ -1,6 +1,5 @@
 .services {
     border-radius: 0px 0px 12px 12px;
-    // background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
     position: relative;
 }
 
@@ -20,24 +19,35 @@
     }
 }
 
-.all-cards-services {
-    color: #24A3FF;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 10px;
+.all-cards {
 
-    @media (min-width: 1920px) {
-        &:hover {
-            color: #F0145A;
-            &::after {
-                content: "";
-                background-image: url(../images/arrow-hover.svg);
+    &-services {
+        color: #24A3FF;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-top: 0;
+        text-decoration: none;
+
+        &-hover {
+            @media (min-width: 1920px) {
+                &:hover {
+                    color: #F0145A;
+                    &::after {
+                        content: "";
+                        background-image: url(../images/arrow-hover.svg);
+                    }
+                }
             }
         }
+    }
+
+    &-link {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
     }
 }
 
@@ -58,7 +68,7 @@
     color: transparent;
     font-size: 30px;
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
     margin-top: 0;
     margin-bottom: 30px;
 
