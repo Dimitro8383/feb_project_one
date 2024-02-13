@@ -23,6 +23,13 @@
     &-contacts {
         position: relative;
         padding-top: 32px;
+        margin-left: 30px;
+        margin-right: 30px;
+    
+        @media (min-width: 768px) {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
 
         &::before {
             content: '';
