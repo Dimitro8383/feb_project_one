@@ -43,7 +43,9 @@
             <section class="services">
                 <div class="wrapper">
                     <section class="all-cards">
-                        <p class="all-cards-services">Services</p>
+                        <div class="all-cards-link">
+                            <a href="/" aria-label="link to services" class="all-cards-services all-cards-services-hover">Services</a>
+                        </div>
                         <h2 class="all-cards-title">What can we do better than others?</h2>
                         <div class="all-cards-contain">
                             <div class="card">
@@ -116,7 +118,9 @@
                         </picture>
                         <div class="slider-content">
                             <div>
-                                <p class="slider-title">команда</p>
+                                <div class="slider-title">
+                                    <a href="/" aria-label="link to command" class="all-cards-services">команда</a>
+                                </div>
                                 <p class="slider-text">
                                     Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
                                 </p>
@@ -131,9 +135,9 @@
                     </div>
                     <div class="dot">
                         <div class="dot-container">
-                            <div class="dot-one"></div>
-                            <div class="dot-two"></div>
-                            <div class="dot-two"></div>
+                            <div class="dot-slider dot-slider-active"></div>
+                            <div class="dot-slider dot-slider-noactive"></div>
+                            <div class="dot-slider dot-slider-noactive"></div>
                         </div>
                     </div>
                 </div>
@@ -210,9 +214,9 @@
         <section class="publ">
             <div class="wrapper">
                 <div class="publ-title">
-                    <p class="all-cards-services">
-                        Publications
-                    </p>
+                    <div class="publ-cards-link">
+                        <a href="/" aria-label="link to publications" class="all-cards-services">Publications</a>
+                    </div>
                     <h2 class="all-cards-title">We have something to tell</h2>
                 </div>
                 <div class="publ-all-cards-contain">
@@ -220,7 +224,7 @@
                         <div class="publ-pic publ-pic-one"></div>
                         <div class="publ-text">
                             <p class="publ-text-title">Equity associate</p>
-                            <p class="publ-text-date">April 22</p>
+                            <time class="publ-text-date">April 22</time>
                             <p class="publ-text-line"></p>
                             <p class="publ-text-description">I'm a jun on projects. I am a co-owner of a law firm. How it happened. Before entering my parents told me that if I…</p>
                         </div>
@@ -229,7 +233,7 @@
                         <div class="publ-pic publ-pic-two"></div>
                         <div class="publ-text">
                             <p class="publ-text-title">Penalty for the Good Corporation: what will happen to Google and others for violating the GDPR</p>
-                            <p class="publ-text-date">September 29</p>
+                            <time class="publ-text-date">September 29</time>
                             <p class="publ-text-line"></p>
                             <p class="publ-text-description">And why the recovery of 50 million euros could be a fateful precedent According to Mind.ua January 21 National Commission for Data Protection.</p>
                         </div>
@@ -238,7 +242,7 @@
                         <div class="publ-pic publ-pic-three"></div>
                         <div class="publ-text">
                             <p class="publ-text-title">Millennial Testament</p>
-                            <p class="publ-text-date">August 19</p>
+                            <time class="publ-text-date">August 19</time>
                             <p class="publ-text-line"></p>
                             <p class="publ-text-description">What and how modern vloggers, opinion leaders and crypto-millionaires will inherit A typical legacy of the Ukrainian generation X looks like this: an apartment in…</p>
                         </div>
@@ -250,27 +254,24 @@
     <footer class="footer">
         <div class="wrapper">
             <div class="footer-contacts">
-                <div class="footer-contacts-line"></div>
-                <div class="footer-contacts-all">
-                    <div class="footer-contacts-address">
-                        <div class="footer-contacts-address-street">
-                            <p class="footer-contacts-address-street-house">Kyiv, Mechnikova str., 14/1</p>
-                            <div class="footer-dot">
-                                <a href="/" class="footer-contacts-address-street-map" aria-label="link to hlegal address on map">On map</a>
-                            </div>
+                <div class="footer-contacts-address">
+                    <div class="footer-contacts-address-street">
+                        <p class="footer-contacts-address-street-house">Kyiv, Mechnikova str., 14/1</p>
+                        <div class="footer-dot">
+                            <a href="/" class="footer-contacts-address-street-map" aria-label="link to hlegal address on map">On map</a>
                         </div>
-                        <div class="footer-contacts-address-active">
-                            <a href="/" class="footer-contacts-address-active-facebook" aria-label="link to facebook hlegal"></a>
-                            <div class="footer-dot">
-                                <a href="tel:0800211927" class="footer-contacts-address-active-tel" aria-label="link to dial to hlegal">0800&nbsp;211&nbsp;927</a>
-                            </div>
-                            <div class="footer-dot">
-                                <a href="mailto:contact@forstudy.space" class="footer-contacts-address-active-email" aria-label="link to send email to hlegal">e-&nbsp;mail:&nbsp;contact@forstudy.space</a>
-                            </div>
+                    </div>
+                    <div class="footer-contacts-address-active">
+                        <a href="/" class="footer-contacts-address-active-facebook" aria-label="link to facebook hlegal"></a>
+                        <div class="footer-dot">
+                            <a href="tel:0800211927" class="footer-contacts-address-active-tel" aria-label="link to dial to hlegal">0800&nbsp;211&nbsp;927</a>
                         </div>
-                        <p class="footer-bottom">©&nbsp;2021&nbsp;HLEGAL&nbsp;Law&nbsp;company,&nbsp;LLC</p>
-                    </div>   
-                </div>
+                        <div class="footer-dot">
+                            <a href="mailto:contact@forstudy.space" class="footer-contacts-address-active-email" aria-label="link to send email to hlegal">e-&nbsp;mail:&nbsp;contact@forstudy.space</a>
+                        </div>
+                    </div>
+                    <p class="footer-bottom">©&nbsp;2021&nbsp;HLEGAL&nbsp;Law&nbsp;company,&nbsp;LLC</p>
+                </div>   
             </div>
         </div>
     </footer>

@@ -22,7 +22,6 @@
 @media (min-width: 768px) {        
     .publ-card-one {
         grid-area: one;
-
     }
     .publ-card-two {
         grid-area: two;
@@ -35,6 +34,16 @@
 .publ {
     padding-top: 30px;
     background: #F5F5FA;
+
+    &-cards-link {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+
+        @media (min-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
 
     &-card-color {
         background-color: #ffffff;
@@ -88,7 +97,7 @@
             margin-bottom: 0;
         }
 
-        &-date {
+        time {
             color: #B3B3BA;
             font-size: 12px;
             font-weight: 700;
@@ -96,7 +105,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             margin-top: 0;
-            margin-bottom: 0;
+            margin-bottom: 0;            
         }
 
         &-line::after {

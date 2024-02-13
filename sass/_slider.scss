@@ -56,27 +56,8 @@
     }
 
     &-title {
-        color: #24A3FF;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-top: 0;
         margin-bottom: 5px;
-
-        &::after {
-            content: '';
-            display: inline-block;
-            background-image: url(../images/Arrow.svg);
-            background-position: center;
-            background-color: #d3d3d3 50% ;
-            background-repeat: no-repeat;
-            background-size: cover; 
-            width: 12px;
-            height: 12px;           
-        }
-    }
+}
 
     &-text {
         align-self: stretch;
@@ -129,33 +110,21 @@
         gap: 15px;
     }
 
-    &-one::after {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border-radius: 8px;
-        background-color: #24A3FF;
+    &-slider {
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+        }
+            
+        &-active::after {
+            background-color: #24A3FF;
+        }
+
+        &-noactive::after {
+            background-color: rgb(36, 163, 255, 0.2);
+        }
     }
-
-    &-two::after {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border-radius: 8px;
-        background-color: rgb(36, 163, 255, 0.2);
-    }
-
-    &-two::after {
-        content: "";
-        display: inline-block;
-        width: 16px;
-        height: 16px;
-        border-radius: 8px;
-        background-color: rgb(36, 163, 255, 0.2);
-    }
-}   
-
-
-
+}
