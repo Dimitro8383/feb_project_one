@@ -350,13 +350,57 @@ body {
 }
 
 .main-color {
-  background: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background-image: linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media (min-width: 1920px) {
-  .menu-hover:hover {
-    color: #F0145A;
+.hero {
+  background-image: url("../images/symbol_h.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+@media (min-width: 1024px) {
+  .hero {
+    background-size: contain;
   }
+}
+.hero-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hero-scroll {
+  display: inline-block;
+  background-image: url(../images/hero-scroll.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  bottom: 30px;
+  left: calc(50% - 21px);
+}
+.hero-scroll:hover circle {
+  stroke: #F0145A;
+}
+.hero-scroll:hover path {
+  stroke: #F0145A;
+}
+
+.menu-hover:hover {
+  color: #F0145A;
 }
 .menu-container {
   display: flex;
@@ -543,14 +587,12 @@ body {
   margin-top: 0;
   text-decoration: none;
 }
-@media (min-width: 1920px) {
-  .all-cards-services-hover:hover {
-    color: #F0145A;
-  }
-  .all-cards-services-hover:hover::after {
-    content: "";
-    background-image: url(../images/arrow-hover.svg);
-  }
+.all-cards-services-hover:hover {
+  color: #F0145A;
+}
+.all-cards-services-hover:hover::after {
+  content: "";
+  background-image: url(../images/arrow-hover.svg);
 }
 .all-cards-link {
   display: flex;
@@ -558,6 +600,11 @@ body {
   margin-bottom: 10px;
 }
 
+.all-cards-services {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
 .all-cards-services::after {
   content: "";
   display: inline-block;
@@ -566,7 +613,6 @@ body {
   background-repeat: no-repeat;
   width: 12px;
   height: 12px;
-  margin-left: 2px;
 }
 
 .all-cards-title {
@@ -1114,10 +1160,8 @@ body {
     margin-bottom: 0;
   }
 }
-.footer-contacts-address-active-facebook {
-  background-image: url(../images/facebook-footer.svg);
-  height: 38px;
-  width: 38px;
+.footer-contacts-address-active-facebook:hover path {
+  fill: #F0145A;
 }
 .footer-contacts-address-active-tel {
   color: #46466E;
@@ -1131,6 +1175,9 @@ body {
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
+}
+.footer-contacts-address-active-email:hover {
+  color: #F0145A;
 }
 .footer-bottom {
   display: flex;

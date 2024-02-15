@@ -102,10 +102,8 @@
                     margin-bottom: 0;
                 }
 
-                &-facebook {
-                    background-image: url(../images/facebook-footer.svg);
-                    height: 38px;
-                    width: 38px;
+                &-facebook:hover path {
+                    fill: #F0145A;
                 }
 
                 &-tel {
@@ -121,6 +119,10 @@
                     font-size: 16px;
                     font-weight: 700;
                     text-decoration: none;
+
+                    &:hover {
+                        color: #F0145A;
+                    }
                 }
             }
         }

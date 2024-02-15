@@ -1,10 +1,10 @@
 .menu {
     
-    @media (min-width: 1920px) {
-        &-hover:hover {
-            color: #F0145A;
-            }
+
+    &-hover:hover {
+        color: #F0145A;
         }
+
     &-container { 
         display: flex;
         flex-direction: column;
