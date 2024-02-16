@@ -463,6 +463,24 @@ body {
   display: flex;
   align-items: center;
 }
+.menu-slider-link:first-child {
+  margin-left: 30px;
+}
+@media (min-width: 768px) {
+  .menu-slider-link:first-child {
+    margin-left: 60px;
+  }
+}
+@media (max-width: 1023px) {
+  .menu-slider-link:last-child {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .menu-slider-link:last-child {
+    margin-right: 30px;
+  }
+}
 .menu-slider-link-consistent {
   font-size: 30px;
   font-weight: 700;
