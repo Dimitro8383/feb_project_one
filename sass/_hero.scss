@@ -32,15 +32,10 @@
     }
 
     &-scroll {
-        display: inline-block;
+        z-index: 1;
         position: fixed;
         bottom: 30px;
         left: calc(50% - 21px);
-
-        svg {
-            width: 42px;
-            height: 43px;
-        }
 
         &:hover circle {
             stroke: #F0145A;

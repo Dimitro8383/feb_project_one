@@ -99,18 +99,8 @@
                     margin-bottom: 0;
                 }
 
-                &-facebook svg {
-                    width: 38px;
-                    height: 38px;
-
-
-                    &:hover {
-                        #facebook {
-                            #Vector {
-                                fill: #F0145A;
-                            }
-                        }
-                    }
+                &-facebook:hover path {
+                    fill: #F0145A;
                 }
 
                 &-tel {
