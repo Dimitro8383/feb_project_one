@@ -33,13 +33,14 @@
 
     &-scroll {
         display: inline-block;
-        background-image: url(../images/hero-scroll.svg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         position: fixed;
         bottom: 30px;
         left: calc(50% - 21px);
+
+        svg {
+            width: 42px;
+            height: 43px;
+        }
 
         &:hover circle {
             stroke: #F0145A;
