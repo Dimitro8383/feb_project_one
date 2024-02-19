@@ -1,12 +1,340 @@
 .header {
-    // position: relative;
 
     &-content {
-        padding: 30px;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-        font-size: 20px;
+        padding-top: 50px;
+        padding-left: 160px;
+        padding-right: 160px;
+        display: grid;
+        grid-template-areas: 
+        "logo contacts"
+        "logo nav"
+        ;
+
+        @media (max-width: 1919.9px) {
+            padding-left: 60px;
+            padding-right: 60px;
+
+        }
+
+        @media (max-width: 1023.9px) {
+            gap: 30px;
+            grid-template-areas: 
+            "contacts"
+            "logo"
+            "nav"
+            ;
+        }
+
+        @media (max-width: 767.9px) {
+            gap: 15px;
+            padding: 0;
+            grid-template-areas: 
+            "contacts contacts"
+            "logo nav"
+        }
     }
 
+    &-contacts {
+        grid-area: contacts;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+        
+        @media (max-width: 1023.9px) {
+            justify-content: flex-start;
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 767.9px) {
+            padding: 10px 15px;
+            justify-content: space-between;
+            background-color: rgba(245, 245, 250, 0.20);
+        }
+
+        &-link {
+            &-lang {
+                color: #FFF;
+                text-align: center;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 1px;
+                padding: 5px 7px;
+                border-radius: 8px;
+                text-decoration: none;
+        
+                &:hover {
+                    border-radius: 8px;
+                    background: rgba(255, 255, 255, 0.20);
+                }
+        
+                &:active {
+                    border-radius: 8px;
+                    background: #F0145A;
+                }                
+            }
+        }
+
+        &-address {
+            display: flex;
+            align-items: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            color: #B3B3BA;
+            font-size: 16px;
+            line-height: normal;
+            align-self: center;
+            
+            @media (max-width: 767.9px) {
+                display: none;
+            }
+        }
+
+        &-tel {
+            display: flex;
+            align-items: center;
+            color: #FFF;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: normal;
+            text-decoration: none;
+            align-self: center;
+        }
+
+        &-facebook {
+            display: flex;
+            align-items: center;
+
+            &-hover {
+                #facebook {
+                    path {
+                        fill: red;
+                    }
+                }
+            }
+
+            @media (max-width: 767.9px) {
+                display: none;
+            }
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+
+    }
+
+    &-logo { 
+        grid-area: logo;
+        display: grid;
+        gap: 4px;
+        grid-template-areas:
+            "logo-top"
+            "logo-bottom"
+            ;
+
+        @media (max-width: 767.9px) {
+            padding-left: 15px;
+            display: grid;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 4px;
+            grid-template-areas:
+            "logo-top logo-text"
+            "logo-bottom logo-text"
+            ;
+        }
+
+        &-link img {
+            width: 130px;
+            height: auto;
+
+            @media (max-width: 767.9px) {
+                width: 70px;
+                height: 25px;
+                grid-area: logo-top;
+            }
+        }
+        
+        &-sign {
+            background-image: url(../images/hlegal-main-logo-sign.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 130px;
+            height: 8px;
+
+            @media (max-width: 767.9px) {
+                width: 70px;
+                height: 4px;
+                grid-area: logo-bottom;
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            grid-area: logo-text;
+
+            p {
+                margin-top: 0;
+                margin-bottom: 0;
+                color: #FFF;
+                font-size: 20px;
+                line-height: normal;
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+
+                & p:not(:nth-of-type(2)) {
+                    display: none;
+                }
+                
+            &::before {
+                content: '';
+                display: inline-block;
+                background-image: url(../images/hlegal-main-logo-separator.svg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 12px;
+                height: 26px;
+                margin-right: 4px;    
+            }
+        }
+    }
+
+    &-nav {
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        @media (max-width: 1023.9px) {
+            justify-content: flex-start;
+        }
+
+        @media (max-width: 767.9px) {
+            justify-content: flex-end;
+            padding-right: 15px;
+        }
+
+        &-link {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+
+            @media (max-width: 767.9px) {
+                display: none;
+            }
+
+            @media (max-width: 1023.9px) {
+                justify-content: flex-start;
+            }
+
+            & a {
+                color: #FFF;
+                font-size: 20px;
+                line-height: normal;
+                text-decoration: none;
+            }
+        }
+
+
+        &-menu {
+            display: inline-block;
+            background-image: url(../images/hlegal-main-humburger.svg);
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-color: transparent;
+            width: 32px;           
+            height: 32px;
+            border: 0;
+
+            &:active {
+                background-image: url(../images/hlegal-main-humburger-active.svg);
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
 }
+
+@media (min-width: 768px) {
+    .dott::before {
+        content: '';
+        display: inline-block;
+        background-color: #B3B3BA;
+        height: 6px;
+        width: 6px;
+        border-radius: 3px;
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+}
+
+dialog {
+    width: 359px;
+    padding: 12px;
+    border-radius: 12px 12px 0px 0px;
+    background: #FFF;
+    border: 0;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items:stretch;
+        gap: 15px;
+
+        button {
+            align-self: flex-end;
+            background-image: url(../images/dialog-close.svg);
+            background-position: center;
+            background-repeat: no-repeat; 
+            background-size: cover;
+            background-color: transparent;
+            width: 32px;           
+            height: 32px;
+            border: 0;
+        }
+
+    }
+        a {
+            border-radius: 12px;
+            background: #F5F5FA;
+            text-decoration: none;
+            width: 100%;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            color: #24A3FF;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            
+            &:active {
+                border-radius: 12px;
+                background: #E6E6F0;
+            }
+        }
+
+    ::backdrop {
+        opacity: 0.7;
+        background: #323264;
+    }
+}
+
+
+
