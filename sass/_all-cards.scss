@@ -86,37 +86,13 @@
 }
 
 .card-icon {
-    display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 24px;
     background-color: #FFF; 
     width: 92px;
     height: 92px;
-}
-
-.ecommerce {
-    background-image: url('../images/ecommerce.svg');
-}
-
-.support {
-    background-image: url('../images/support.svg');
-}
-
-.group {
-    background-image: url('../images/group.svg');
-}
-
-.trust {
-    background-image: url('../images/trust.svg');
-}
-
-.protection {
-    background-image: url('../images/protection.svg');
-}
-
-.layer {
-    background-image: url('../images/layer.svg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-title {

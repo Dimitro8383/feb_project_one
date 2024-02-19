@@ -106,6 +106,13 @@
         &-facebook {
             display: flex;
             align-items: center;
+
+            &:hover {
+                #Vector-header {
+                    fill:#F0145A;
+                }
+            }
+        
             @media (max-width: 767.9px) {
                 display: none;
             }
