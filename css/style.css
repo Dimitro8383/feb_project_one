@@ -448,17 +448,10 @@ body {
   display: flex;
   align-items: center;
 }
-.header-contacts-facebook-hover #facebook path {
-  fill: red;
-}
 @media (max-width: 767.9px) {
   .header-contacts-facebook {
     display: none;
   }
-}
-.header-contacts svg {
-  width: 24px;
-  height: 24px;
 }
 .header-logo {
   grid-area: logo;
@@ -598,6 +591,8 @@ body {
 
 @media (min-width: 768px) {
   .dott::before {
+    display: flex;
+    align-items: center;
     content: "";
     display: inline-block;
     background-color: #B3B3BA;
@@ -687,14 +682,10 @@ dialog ::backdrop {
   transform: translate(-50%, -50%);
 }
 .hero-scroll {
-  display: inline-block;
+  z-index: 1;
   position: fixed;
   bottom: 30px;
   left: calc(50% - 21px);
-}
-.hero-scroll svg {
-  width: 42px;
-  height: 43px;
 }
 .hero-scroll:hover circle {
   stroke: #F0145A;
@@ -924,8 +915,9 @@ dialog ::backdrop {
 .all-cards-services-hover:hover {
   color: #F0145A;
 }
-.all-cards-services-hover:hover::after svg path {
-  stroke: #F0145A;
+.all-cards-services-hover:hover::after {
+  content: "";
+  background-image: url(../images/arrow-hover.svg);
 }
 .all-cards-link {
   display: flex;
@@ -1475,11 +1467,7 @@ s .slider-photo {
     margin-bottom: 0;
   }
 }
-.footer-contacts-address-active-facebook svg {
-  width: 38px;
-  height: 38px;
-}
-.footer-contacts-address-active-facebook svg:hover #facebook #Vector {
+.footer-contacts-address-active-facebook:hover path {
   fill: #F0145A;
 }
 .footer-contacts-address-active-tel {

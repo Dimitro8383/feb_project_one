@@ -106,25 +106,10 @@
         &-facebook {
             display: flex;
             align-items: center;
-
-            &-hover {
-                #facebook {
-                    path {
-                        fill: red;
-                    }
-                }
-            }
-
             @media (max-width: 767.9px) {
                 display: none;
             }
         }
-
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-
     }
 
     &-logo { 
@@ -275,6 +260,8 @@
 
 @media (min-width: 768px) {
     .dott::before {
+        display: flex;
+        align-items: center;
         content: '';
         display: inline-block;
         background-color: #B3B3BA;
