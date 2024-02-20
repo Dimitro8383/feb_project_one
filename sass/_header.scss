@@ -41,6 +41,7 @@
         align-items: center;
         justify-content: flex-end;
         margin-bottom: 16px;
+        gap: 6px;
         
         @media (max-width: 1023.9px) {
             justify-content: flex-start;
@@ -86,6 +87,7 @@
             font-size: 16px;
             line-height: normal;
             align-self: center;
+            gap: 6px;
             
             @media (max-width: 767.9px) {
                 display: none;
@@ -101,11 +103,13 @@
             line-height: normal;
             text-decoration: none;
             align-self: center;
+            gap: 6px;
         }
 
         &-facebook {
             display: flex;
             align-items: center;
+            gap: 6px;
 
             &:hover {
                 #Vector-header {
@@ -262,21 +266,6 @@
                 display: none;
             }
         }
-    }
-}
-
-@media (min-width: 768px) {
-    .dott::before {
-        display: flex;
-        align-items: center;
-        content: '';
-        display: inline-block;
-        background-color: #B3B3BA;
-        height: 6px;
-        width: 6px;
-        border-radius: 3px;
-        margin-right: 6px;
-        margin-left: 6px;
     }
 }
 
