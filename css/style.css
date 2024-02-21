@@ -593,16 +593,89 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
 }
-@media (max-width: 1023.9px) {
-  .header-nav {
-    justify-content: flex-start;
-  }
-}
 @media (max-width: 767.9px) {
   .header-nav {
-    justify-content: flex-end;
     padding-right: 15px;
   }
+}
+.header-nav dialog {
+  width: 359px;
+  padding: 12px;
+  border-radius: 12px 12px 0px 0px;
+  background-color: #FFF;
+  border: 0;
+}
+@media (min-width: 768px) {
+  .header-nav dialog {
+    position: static;
+    display: flex;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .header-nav dialog {
+    justify-content: flex-end;
+  }
+}
+.header-nav dialog form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 15px;
+}
+@media (min-width: 768px) {
+  .header-nav dialog form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.header-nav dialog form button {
+  align-self: flex-end;
+  background-image: url(../images/dialog-close.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  border: 0;
+}
+@media (min-width: 768px) {
+  .header-nav dialog form button {
+    display: none;
+  }
+}
+.header-nav dialog a {
+  border-radius: 12px;
+  background: #F5F5FA;
+  text-decoration: none;
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #24A3FF;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.header-nav dialog a:active {
+  border-radius: 12px;
+  background: #E6E6F0;
+}
+@media (min-width: 768px) {
+  .header-nav dialog a {
+    padding: 0;
+    font-size: 16px;
+    color: #FFF;
+    border-radius: 0;
+    background: transparent;
+  }
+}
+.header-nav dialog ::backdrop {
+  opacity: 0.7;
+  background: #323264;
 }
 .header-nav-link {
   display: flex;
@@ -645,51 +718,6 @@ body {
   .header-nav-menu {
     display: none;
   }
-}
-
-dialog {
-  width: 359px;
-  padding: 12px;
-  border-radius: 12px 12px 0px 0px;
-  background: #FFF;
-  border: 0;
-}
-dialog form {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 15px;
-}
-dialog form button {
-  align-self: flex-end;
-  background-image: url(../images/dialog-close.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: transparent;
-  width: 32px;
-  height: 32px;
-  border: 0;
-}
-dialog a {
-  border-radius: 12px;
-  background: #F5F5FA;
-  text-decoration: none;
-  width: 100%;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  color: #24A3FF;
-  text-align: center;
-  font-size: 24px;
-  font-weight: 700;
-}
-dialog a:active {
-  border-radius: 12px;
-  background: #E6E6F0;
-}
-dialog ::backdrop {
-  opacity: 0.7;
-  background: #323264;
 }
 
 .main-color {
